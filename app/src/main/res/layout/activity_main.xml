@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--  Posicionado acima do LinearLayout de Escrita  -->
+    <TextView android:layout_above="@id/escritaLl"
+              android:id="@+id/leituraTv"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    />
+
+    <!--  Alinhado na parte de baixo da tela  -->
+    <LinearLayout android:id="@+id/escritaLl"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true">
+        <!--
+        Width em 0sp porque a largura será dada pelos pesos 3/4 para EditText e 1/4 para Button
+       -->
+        <EditText android:id="@+id/escritaEt"
+                  android:layout_width="0sp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="3"
+        />
+        <!-- Método para tratar evento de clique Gravar  -->
+        <Button android:id="@+id/gravarBt"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gravar"
+        />
+    </LinearLayout>
+
+</RelativeLayout>
